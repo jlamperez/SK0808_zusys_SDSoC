@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="SK0808_zusys_SDSoC"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+Basic Trenz TEBF0808 + TE0808 Zynq Ultrascale+ platform
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="Linux">
+        <sdx:configuration sdx:name="Linux"
+                           sdx:displayName="Linux"
+                           sdx:defaultProcessorGroup="Linux"
+                           sdx:runtimes="cpp">
+            <sdx:description></sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="Linux/boot/linux.bif"
+                            sdx:imageData="Linux/Linux/image"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="Linux/boot/generic.readme"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="Linux"
+                                sdx:displayName="Linux"
+                                sdx:cpuType="cortex-a53">
+                <sdx:os sdx:name="linux"
+                        sdx:displayName="linux"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="SK0808_zusys_SDSoC"
+              sdx:version="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+Basic Trenz TEBF0808 + TE0808 Zynq Ultrascale+ platform
+    </sdx:description>
+    <sdx:hardwarePlatforms>
+        <sdx:hardwarePlatform sdx:path="hw" sdx:name="SK0808_zusys_SDSoC.dsa"/>
+    </sdx:hardwarePlatforms>
+    <sdx:softwarePlatforms>
+        <sdx:softwarePlatform sdx:path="sw" sdx:name="SK0808_zusys_SDSoC.spfm"/>
+    </sdx:softwarePlatforms>
+</sdx:platform>

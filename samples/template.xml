@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <manifest:Manifest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:manifest="http://www.xilinx.com/manifest">
+	<template name="Array partition" location="array_partition" description="This example shows how to use array partitioning to improve performance of a hardware function">
+		<supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+		</supports>
+    <accelerator name="matmul_partition_accel" location="matmul.cpp"/>
+	</template>
+	<template name="Burst rw" location="burst_rw" description="This is simple example of using AXI4-master interface for burst read and write">
+		<supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+		</supports>
+    <accelerator name="vec_incr_accel" location="vec_incr.cpp"/>
+	</template>
+	<template name="Custom data type" location="custom_data_type" description="This is a simple example of RGB to HSV conversion to demonstrate Custom Data Type usage in hardware accelerator. Xilinx HLS compiler supports custom data type to operate within the hardware function and also it acts as a memory interface between PL to DDR">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="rgb_to_hsv_accel" location="rgb_to_hsv.cpp"/>
+    </template>
+	<template name="Dependence inter" location="dependence_inter" description="This is a simple example to demonstrate inter dependence attribute. Using inter dependence attribute user can provide additional dependency details to compiler which allow compiler to perform unrolling/pipelining to get better performance.">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vconv_hw" location="vconv.cpp"/>
+    </template>
+	<template name="Dma sg" location="dma_sg" description="This example demonstrates how to use Scatter-Gather DMAs for data transfer to/from hardware accelerator">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_hw" location="vadd.cpp"/>
+    </template>
+	<template name="Dma simple" location="dma_simple" description="This example demonstrates how to insert Simple DMAs for data transfer between User program and hardware accelerator">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_hw" location="vadd.cpp"/>
+    </template>
+	<template name="Full array 2d" location="full_array_2d" description="This is a simple example of accessing full data from 2D array">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="mmult_accel" location="mmult.cpp"/>
+    </template>
+	<template name="Lmem 2rw" location="lmem_2rw" description="This is a simple example of vector addition to demonstrate how to utilize both ports of Local Memory">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_accel" location="vadd.cpp"/>
+    </template>
+	<template name="Loop fusion " location="loop_fusion" description="This example will demonstrate how to fuse two loops into one to improve the performance of a C/C++ hardware function.">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="nearest_neighbor_loop_fusion_accel" location="nearest_neighbor.cpp"/>
+    </template>
+	<template name="Loop perfect " location="loop_perfect" description="This nearest neighbor example is to demonstrate how to achieve better performance using perfect loop.">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="nearest_accel" location="nearest.cpp"/>
+    </template>
+	<template name="Loop pipeline " location="loop_pipeline" description="This example demonstrates how loop pipelining can be used to improve the performance of a hardware function.">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_pipelined_accel" location="vector_addition.cpp"/>
+    </template>
+	<template name="Loop reorder " location="loop_reorder" description="This is a simple example of matrix multiplication (Row x Col) to demonstrate how to achieve better pipeline II factor by loop reordering.">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="mmult_accel" location="mmult.cpp"/>
+    </template>
+	<template name="Row array 2D" location="row_array_2d" description="This is a simple example of accessing each row of data from 2D array">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="row_array_2d_accel" location="row_array_2d.cpp"/>
+    </template>
+	<template name="Shift register " location="shift_register" description="This example demonstrates how to shift values in each clock cycle">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="fir_shift_register_accel" location="fir.cpp"/>
+    </template>
+	<template name="Systolic array" location="systolic_array" description="Matrix multiplication implemented as systolic array">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="mmult_accel" location="mmult.cpp"/>
+    </template>
+	<template name="Wide memory rw" location="wide_memory_rw" description="Wide memory read write 128 bit wide">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_accel" location="vadd.cpp"/>
+    </template>
+	<template name="Window array 2d" location="window_array_2d" description="This is a simple example of accessing window of data from 2D array">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="window_array_2d_accel" location="window_array_2d.cpp"/>
+    </template>
+	<template name="Direct connect" location="direct_connect" description="This is a simple example of matrix multiplication with matrix addition (Out = (A x B) + C)to demonstrate direct connection which helps to achieve increasing in system parallelism and concurrency">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="mmult_accel" location="mmult.cpp"/>
+        <accelerator name="madd_accel" location="mmult.cpp"/>
+    </template>
+	<template name="Data access random" location="data_access_random" description="This is a simple example of matrix multiplication (Row x Col) to demonstrate random data access pattern">
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="mmult_accel" location="mmult.cpp"/>
+    </template>
+	<template name="Sys port" location="sys_port" description="This is a simple example which demonstrates sys_port usage">       
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_accel" location="vadd.cpp"/>
+    </template>
+	<template name="Hello vadd" location="hello_vadd" description="This is a basic hello world kind of example which demonstrates how to achieve vector addition using hardware function">       
+        <supports>
+            <or>
+                <os name="Linux"/>
+				<os name="Standalone"/>
+            </or>
+        </supports>
+        <accelerator name="vadd_accel" location="vector_addition.cpp"/>
+    </template>
+	<template name="File IO Video Processing" location="file_io_manr_sobel" description="Linux video processing application that reads input video from a file and writes out the output video to a file. Video processing includes Motion Adaptive Noise Reduction (MANR) followed by a Sobel filter for edge detection. You can run it by supplying a 1080p YUV422 file as input with limiting number of frames to a maximum of 20 frames.">       
+        <supports>
+            <or>
+				<os name="Linux"/>
+            </or>
+        </supports>
+        <accelerator name="manr" location="manr.cpp"/>
+        <accelerator name="sobel_filter" location="sobel_filter.cpp"/>
+    </template>
+	<template name="File IO Dense Optical Flow" location="file_io_optical" description="Linux video processing application that reads input video from a file and writes out the output video to a file. Video processing performs LK Dense Optical Flow over two Full HD frames video file. You can run it by supplying a 1080p YUV422 file route85_1920x1080.yuv as input.">       
+        <supports>
+            <or>
+				<os name="Linux"/>
+            </or>
+        </supports>
+        <accelerator name="readMatRows" location="optflow_hls.cpp"/>
+        <accelerator name="computeSum" location="optflow_hls.cpp"/>
+        <accelerator name="computeFlow" location="optflow_hls.cpp"/>
+        <accelerator name="getOutPix" location="optflow_hls.cpp"/>
+        <accelerator name="writeMatRows" location="optflow_hls.cpp"/>
+    </template>
+	<template name="File IO Stereo Block Matching" location="file_io_sbm" description="Linux video processing application that reads input video from a file and writes out the output video to a file. Video processing performs Stereo Block Matching to calculate depth in a single sample stereo video file desk_1280x720.yuv as input.">       
+        <supports>
+            <or>
+				<os name="Linux"/>
+            </or>
+        </supports>
+        <accelerator name="stereo_remap_bm" location="stereo_remap_bm.cpp"/>
+    </template>
+</manifest:Manifest>

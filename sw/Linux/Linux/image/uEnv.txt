@@ -1,0 +1,10 @@
+bootargs=earlycon clk_ignore_unused root=/dev/mmcblk1p2 rw rootwait console=ttyPS0,115200
+bootkernel=run loadkernel && run loaddtb && booti ${kernel_load_address} - ${devicetree_load_address}
+kernel_image=Image
+kernel_load_address=0x80000
+devicetree_load_address=0x4000000
+machine_name=te0808-9eg-tebf0808-zynqmp
+devicetree_image=te0808-9eg-tebf0808-zynqmp.dtb
+uenvcmd=run bootkernel
+loaddtb=fatload mmc $sdbootdev ${devicetree_load_address} ${devicetree_image}
+loadkernel=fatload mmc $sdbootdev ${kernel_load_address} ${kernel_image}
